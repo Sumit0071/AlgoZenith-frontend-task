@@ -67,7 +67,7 @@ export default function ChapterList() {
   const [expandedChapter, setExpandedChapter] = useState<number | null>( 1 )
 
   return (
-    <div className="grid grid-cols-[240px,1fr] gap-4">
+    <div className="grid grid-cols-[240px,1fr] gap-4 border border-blue-300 p-4 rounded-sm bg-gradient-to-r from-transparent to-blue-50">
       {/* Chapter List */}
       <div className="space-y-2">
         {chapters.map( ( chapter ) => (
@@ -78,10 +78,10 @@ export default function ChapterList() {
             onClick={() => setExpandedChapter( chapter.id )}
           >
             <span>{`Chapter ${chapter.id}`}</span>
-          
+
             <span className="flex items-center">
               <Clock className="h-4 w-4" />
-            {chapter.totalDuration}</span>
+              {chapter.totalDuration}</span>
           </button>
         ) )}
       </div>

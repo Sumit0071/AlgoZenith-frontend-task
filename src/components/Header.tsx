@@ -19,7 +19,7 @@ export default function Header( { activeTab, setActiveTab, toggleSidebar, isMobi
                     </Button>
                 )}
                 <div className="font-semibold text-xl lg:hidden">AlgoZenith</div>
-                <div className="hidden lg:flex gap-4">
+                <div className="hidden lg:flex gap-4 border border-blue-300 p-1 rounded-sm bg-gradient-to-r from-blue-50 to-transparent ">
                     <Button
                         variant={activeTab === "mentor" ? "secondary" : "ghost"}
                         onClick={() => setActiveTab( "mentor" )}
